@@ -67,3 +67,28 @@
     border-radius: 5px;
     padding: 0.5rem;
 }
+
+.smaller-screens{
+    display: none;
+}
+
+/* MEDIA QUERY FOR RESPONSIVENESS */
+@media screen and (max-width: 1000px){
+    .smaller-screens{
+        display: flex;
+        width: 85vw;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        z-index: 50;
+    }
+
+    .smaller-screens img{
+        position: relative;
+        right: 3%;
+    }
+
+    .navbar{
+        display: none;
+    }
+}

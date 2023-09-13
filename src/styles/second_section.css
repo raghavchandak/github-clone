@@ -1,0 +1,46 @@
+.in-between {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  left: 5%;
+  margin-top: 4rem;
+}
+
+.in-between-text {
+  position: relative;
+  left: 6.5%;
+  color: white;
+}
+
+.in-between-bottom {
+  display: flex;
+  margin-top: 0.5rem;
+  position: relative;
+  left: 5.7%;
+  width: 90vw;
+}
+
+.bottom-line {
+  background: linear-gradient(#56d364, #2ea043, #12201c);
+  height: 20vh;
+  width: 2px;
+}
+
+.in-between-desc {
+  color: white;
+  word-wrap: break-word;
+  margin-left: 7.9%;
+}
+
+/* MEDIA QUERY FOR RESPONSIVE DESIGN */
+@media screen and (max-width: 600px) {
+  .in-between-bottom{
+    position: relative;
+    left: 7%;
+  }
+
+  .in-between-desc{
+    font-size: 1.3rem;
+    margin-left: 10%;
+  }
+}

@@ -1,10 +1,12 @@
 * {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .App {
   width: 100vw;
+  background-color: black;
 }
 
 .droneImg {
@@ -18,13 +20,23 @@
   position: relative;
   top: 5%;
   left: 5%;
-  max-width: 60vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.line-top {
+  height: 80vh;
 }
 
 .homepage-info {
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 13%;
+}
+
+.first-info:hover {
+  cursor: pointer;
 }
 
 .first-info {
@@ -36,15 +48,170 @@
   width: 30rem;
 }
 
-.name{
+.name {
   font-size: 7vw;
   color: white;
   margin-top: 1.5rem;
   font-weight: 500;
 }
 
-.desc{
+.desc {
   margin-top: 1.5rem;
   color: gray;
   font-weight: 400;
+}
+
+.dev-brackets {
+  fill: #d5a4e9;
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  background-color: transparent;
+}
+
+.line-bottom {
+  background: linear-gradient(
+    #d2a8ff,
+    #a371f7 10%,
+    #196c2e 70%,
+    #2ea043 80%,
+    #56d364
+  );
+  height: 20vh;
+  margin-left: 0.56rem;
+  margin-top: 0.5rem;
+  width: 2px;
+}
+
+/*********** OPTIONS BELOW THE FIRST PAGE STYLES ***************/
+.options {
+  margin-top: 4rem;
+  display: flex;
+}
+
+.email-signup {
+  display: flex;
+  margin-right: 4rem;
+}
+
+.email {
+  padding: 1rem;
+  border-radius: 5px;
+  width: 20vw;
+}
+
+.signUp {
+  padding: 1rem;
+  background-color: #773ec6;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  width: 13vw;
+}
+
+.signUp:hover{
+  cursor: pointer;
+}
+
+.seperator {
+  background-color: gray;
+  width: 1px;
+}
+
+.start {
+  margin-left: 4rem;
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  font-weight: bolder;
+  border-radius: 5px;
+  border: 1px solid #d5a4e9;
+  width: 20vw;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+
+@media screen and (max-width: 850px) {
+  .first-info {
+    width: 60%;
+  }
+
+  .first-info h3 {
+    font-size: 0.85rem;
+  }
+
+  .first-info h4 {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .homepage-info {
+    top: 50vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .homepage-info h1 {
+    font-size: 5vw;
+  }
+
+  .options,
+  .email-signup {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .line-bottom {
+    height: 40vh;
+  }
+
+  .options {
+    bottom: 20rem;
+    width: 80vw;
+  }
+
+  .email-signup {
+    margin-right: 0;
+  }
+
+  .email,
+  .signUp,
+  .start {
+    width: 60vw;
+  }
+
+  .email {
+    width: 55vw;
+    margin-bottom: 1rem;
+  }
+
+  .signUp {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+
+  .seperator {
+    display: none;
+  }
+
+  .start {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .line {
+    width: 60vw;
+  }
+
+  .line-top {
+    width: 60vw;
+    height: auto;
+  }
+
+  .homepage-info {
+    position: absolute;
+    top: 60vw;
+  }
 }

@@ -1,0 +1,59 @@
+.card {
+  background: linear-gradient(to right, #153525, #161b22);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60vh;
+  border-radius: 10px;
+  margin: 3rem;
+  margin-top: 0;
+  overflow-y: hidden;
+  padding: 0 5vw 0 5vw;
+}
+
+.my-photo {
+  height: 20rem;
+  width: 20rem;
+  object-fit: cover;
+  object-position: 0% 50%;
+  border-radius: 50%;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item {
+  margin: 2rem 0 1rem 0;
+  font-size: 1.5rem;
+  color: #818991;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 800px){
+    .card{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .my-photo{
+        height: 15rem;
+        width: 15rem;
+        margin: 1rem 0 1rem 0;
+    }
+}
+
+@media screen and (max-height: 600px){
+    .card{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .my-photo{
+        height: 15rem;
+        width: 15rem;
+        margin: 1rem 0 1rem 0;
+    }
+}
